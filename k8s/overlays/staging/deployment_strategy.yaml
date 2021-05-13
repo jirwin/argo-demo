@@ -2,8 +2,9 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: argo-demo
-strategy:
-  blueGreen:
-    activeService: staging-argo-demo-active
-    previewService: staging-argo-demo-preview
-    autoPromotionEnabled: false
+spec:
+  strategy:
+    blueGreen:
+      activeService: staging-argo-demo-active
+      previewService: staging-argo-demo-preview
+      autoPromotionEnabled: false
