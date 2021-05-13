@@ -9,3 +9,11 @@ spec:
         - name: argo-demo
           image: argo-demo:staging
           imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MSG
+              valueFrom:
+                configMapKeyRef:
+                  name: argo-demo-config
+                  key: msg
