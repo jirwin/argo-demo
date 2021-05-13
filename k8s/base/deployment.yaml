@@ -21,6 +21,7 @@ spec:
               name: argo-demo-config
           ports:
             - containerPort: 8080
+  revisionHistoryLimit: 3
   strategy:
     blueGreen:
       activeService: argo-demo-active

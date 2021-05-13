@@ -4,7 +4,11 @@ metadata:
   name: argo-demo
 spec:
   strategy:
-    blueGreen:
-      activeService: staging-argo-demo-active
-      previewService: staging-argo-demo-preview
-      autoPromotionEnabled: false
+    canary:
+      steps:
+        - setWeight: 10
+        - pause:
+            duration: 10s
+        - setWeight: 50
+        - pause: { }
+        - setWeight: 100
