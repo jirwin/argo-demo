@@ -7,5 +7,5 @@ spec:
     spec:
       containers:
         - name: argo-demo
-          image: argo-demo@sha256:b5baf0a06a711c7abcad0625db8353b82705cb01d8de60d1e2f0d4678c7c207f
-          imagePullPolicy: Never
+          image: argo-demo:staging
+          imagePullPolicy: IfNotPresent
