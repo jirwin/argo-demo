@@ -1,10 +1,6 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Rollout
-metadata:
-  name: argo-demo
-spec:
-  template:
-    spec:
-      containers:
-        - name: argo-demo
-          image: argo-demo@sha256:b5baf0a06a711c7abcad0625db8353b82705cb01d8de60d1e2f0d4678c7c207f
+- op: replace
+  path: /spec/template/spec/containers/0/image
+  value: "argo-demo:prod"
+- op: replace
+  path: /spec/template/spec/containers/0/imagePullPolicy
+  value: "IfNotPresent"

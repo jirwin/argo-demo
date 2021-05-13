@@ -1,14 +1,20 @@
-namePrefix: prod-
 commonLabels:
   app: argo-demo
 namespace: argo-demo-prod
 commonAnnotations:
-  note: prod
+  note: production
 resources:
   - namespace.yaml
 bases:
   - ../../base
 patches:
   - replica_count.yaml
-  - image.yaml
   - config.yaml
+  - deployment_strategy.yaml
+patchesJson6902:
+  - target:
+      group: argoproj.io
+      version: v1alpha1
+      kind: Rollout
+      name: argo-demo
+    path: image.yaml

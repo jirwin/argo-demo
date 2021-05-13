@@ -1,4 +1,3 @@
-namePrefix: staging-
 commonLabels:
   app: argo-demo
 namespace: argo-demo-staging

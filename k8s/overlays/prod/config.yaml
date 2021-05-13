@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: argo-demo-config
 data:
-  msg: "hello world from prod"
+  MSG: "hello world from production woot woot"
