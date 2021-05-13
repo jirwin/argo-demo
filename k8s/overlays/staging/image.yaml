@@ -15,5 +15,5 @@ spec:
             - name: MSG
               valueFrom:
                 configMapKeyRef:
-                  name: argo-demo-config
+                  name: staging-argo-demo-config
                   key: msg

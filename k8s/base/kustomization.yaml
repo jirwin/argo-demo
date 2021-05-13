@@ -6,4 +6,4 @@ resources:
 configMapGenerator:
   - name: argo-demo-config
     literals:
-      - MSG=hello world
+      - msg=hello world
