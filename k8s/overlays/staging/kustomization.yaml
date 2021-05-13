@@ -12,3 +12,4 @@ patches:
   - replica_count.yaml
   - image.yaml
   - config.yaml
+  - deployment_strategy.yaml
