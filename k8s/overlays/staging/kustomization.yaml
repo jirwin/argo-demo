@@ -10,7 +10,6 @@ bases:
 patches:
   - replica_count.yaml
   - config.yaml
-  - deployment_strategy.yaml
 patchesJson6902:
   - target:
       group: argoproj.io

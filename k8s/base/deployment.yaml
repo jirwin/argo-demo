@@ -22,4 +22,8 @@ spec:
           ports:
             - containerPort: 8080
   revisionHistoryLimit: 3
-  strategy: {}
+  strategy:
+    blueGreen:
+      activeService: argo-demo-active
+      previewService: argo-demo-preview
+      autoPromotionEnabled: false
