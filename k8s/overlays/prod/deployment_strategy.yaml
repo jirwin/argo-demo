@@ -5,8 +5,6 @@ metadata:
 spec:
   strategy:
     canary:
-      canaryService: argo-demo-preview
-      stableService: argo-demo-active
       steps:
         - setWeight: 10
         - pause:
