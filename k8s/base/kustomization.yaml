@@ -10,4 +10,4 @@ namespace: argo-demo
 configMapGenerator:
   - name: argo-demo-config
     literals:
-      - msg=hello world
+      - MSG=hello world
