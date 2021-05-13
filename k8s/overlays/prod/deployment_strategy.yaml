@@ -5,15 +5,8 @@ metadata:
 spec:
   strategy:
     canary:
-      canaryService: canary-service  # required
-      stableService: stable-service  # required
-      trafficRouting:
-        nginx:
-          stableIngress: primary-ingress  # required
-          annotationPrefix: customingress.nginx.ingress.kubernetes.io # optional
-          additionalIngressAnnotations: # optional
-            canary-by-header: X-Canary
-            canary-by-header-value: iwantsit
+      canaryService: argo-demo-preview
+      stableService: argo-demo-active
       steps:
         - setWeight: 10
         - pause:
