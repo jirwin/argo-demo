@@ -1,8 +1,12 @@
+configurations:
+- rollout-transform.yaml
 commonLabels:
   app: argo-demo
 resources:
   - deployment.yaml
   - service.yaml
+namespace: argo-demo
+
 configMapGenerator:
   - name: argo-demo-config
     literals:

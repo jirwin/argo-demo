@@ -16,14 +16,11 @@ spec:
         - name: argo-demo
           image: argo-demo
           imagePullPolicy: Always
+          envFrom:
+          - configMapRef:
+              name: argo-demo-config
           ports:
             - containerPort: 8080
-          env:
-            - name: MSG
-              valueFrom:
-                configMapKeyRef:
-                  name: argo-demo-config
-                  key: msg
   strategy:
     blueGreen:
       activeService: argo-demo-active

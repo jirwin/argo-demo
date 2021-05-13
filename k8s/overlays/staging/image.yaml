@@ -1,19 +1,6 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Rollout
-metadata:
-  name: argo-demo
-spec:
-  template:
-    spec:
-      containers:
-        - name: argo-demo
-          image: argo-demo:staging
-          imagePullPolicy: IfNotPresent
-          ports:
-            - containerPort: 8080
-          env:
-            - name: MSG
-              valueFrom:
-                configMapKeyRef:
-                  name: staging-argo-demo-config
-                  key: msg
+- op: replace
+  path: /spec/template/spec/containers/0/image
+  value: "argo-demo:staging"
+- op: replace
+  path: /spec/template/spec/containers/0/imagePullPolicy
+  value: "IfNotPresent"
