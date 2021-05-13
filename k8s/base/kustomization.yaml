@@ -1,0 +1,9 @@
+commonLabels:
+  app: argo-demo
+resources:
+  - deployment.yaml
+  - service.yaml
+configMapGenerator:
+  - name: argo-demo-config
+    literals:
+      - MSG=hello world

@@ -1,0 +1,14 @@
+namePrefix: staging-
+commonLabels:
+  app: argo-demo
+namespace: argo-demo-staging
+commonAnnotations:
+  note: staging
+resources:
+  - namespace.yaml
+bases:
+  - ../../base
+patches:
+  - replica_count.yaml
+  - image.yaml
+  - config.yaml
