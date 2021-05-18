@@ -3,4 +3,4 @@ kind: Rollout
 metadata:
   name: argo-demo
 spec:
-  replicas: 20
+  replicas: 1
